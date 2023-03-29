@@ -36,7 +36,6 @@ export function SignUp() {
                 setUserEmail(user.email);
             })
             .catch((error) => {
-                console.log(error);
                 if (error.code === "auth/email-already-in-use") { setSignUpError("This email is already in use") } else
                     if (error.code === "auth/invalid-email") { setSignUpError("Invalid email") } else
                         if (error.code === "auth/weak-password") { setSignUpError("Password should bea at least 6 characters") } else
